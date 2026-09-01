@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-09-01T18:18:51.451Z",
+  "news": [],
+  "documents": [],
+  "announcements": [],
+  "gallery": [],
+  "sources": [
+    {
+      "title": "Facebook สมาคมปิยะมิตรแม่สายร่วมใจ",
+      "url": "https://www.facebook.com/piyamitr.maesai",
+      "type": "Facebook",
+      "note": "ช่องทางสาธารณะของสมาคมสำหรับติดตามข่าวและประกาศ",
+      "active": true,
+      "slug": "facebook-piyamitr"
+    }
+  ],
+  "settings": {
+    "association_name": "สมาคมปิยะมิตรแม่สายร่วมใจ บรรเทาสาธารณภัยและการกุศล",
+    "short_name": "P.C.R.C.",
+    "facebook": "https://www.facebook.com/piyamitr.maesai",
+    "phone": "",
+    "email": "",
+    "line": "",
+    "address": "อำเภอแม่สาย จังหวัดเชียงราย",
+    "map_url": "",
+    "emergency": "1669",
+    "donate_enabled": false,
+    "bank_name": "",
+    "account_name": "",
+    "account_number": "",
+    "donation_note": "โปรดตรวจสอบข้อมูลบัญชีล่าสุดจากช่องทางทางการของสมาคมก่อนทำรายการ",
+    "qr_image": ""
+  }
+}
