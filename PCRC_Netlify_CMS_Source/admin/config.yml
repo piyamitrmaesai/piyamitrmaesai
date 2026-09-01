@@ -4,7 +4,7 @@ backend:
 
 locale: th
 publish_mode: editorial_workflow
-media_folder: assets/uploads
+media_folder: PCRC_Netlify_CMS_Source/assets/uploads
 public_folder: /assets/uploads
 logo_url: /assets/piyamitr-logo.png
 
@@ -12,7 +12,7 @@ collections:
   - name: news
     label: ข่าวสาร
     label_singular: ข่าว
-    folder: content/news
+    folder: PCRC_Netlify_CMS_Source/content/news
     create: true
     delete: true
     extension: json
@@ -43,7 +43,7 @@ collections:
   - name: documents
     label: เอกสารดาวน์โหลด
     label_singular: เอกสาร
-    folder: content/documents
+    folder: PCRC_Netlify_CMS_Source/content/documents
     create: true
     delete: true
     extension: json
@@ -63,7 +63,7 @@ collections:
   - name: announcements
     label: ประกาศหน้าเว็บไซต์
     label_singular: ประกาศ
-    folder: content/announcements
+    folder: PCRC_Netlify_CMS_Source/content/announcements
     create: true
     delete: true
     extension: json
@@ -86,7 +86,7 @@ collections:
   - name: gallery
     label: แกลเลอรีภาพ
     label_singular: อัลบั้ม
-    folder: content/gallery
+    folder: PCRC_Netlify_CMS_Source/content/gallery
     create: true
     delete: true
     extension: json
@@ -105,7 +105,7 @@ collections:
   - name: sources
     label: แหล่งข้อมูล
     label_singular: แหล่งข้อมูล
-    folder: content/sources
+    folder: PCRC_Netlify_CMS_Source/content/sources
     create: true
     delete: true
     extension: json
@@ -126,7 +126,7 @@ collections:
     files:
       - label: ข้อมูลสมาคม / ติดต่อ / บริจาค
         name: site
-        file: content/settings/site.json
+        file: PCRC_Netlify_CMS_Source/content/settings/site.json
         format: json
         fields:
           - { label: ชื่อสมาคม, name: association_name, widget: string }
