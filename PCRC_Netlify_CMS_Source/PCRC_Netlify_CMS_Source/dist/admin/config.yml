@@ -1,0 +1,364 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: th
+publish_mode: editorial_workflow
+media_folder: PCRC_Netlify_CMS_Source/assets/uploads
+public_folder: /assets/uploads
+logo_url: /assets/piyamitr-logo.png
+
+collections:
+  - name: news
+    label: ข่าวสาร
+    label_singular: ข่าว
+    folder: PCRC_Netlify_CMS_Source/content/news
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{date}} — {{title}}"
+    fields:
+      - { label: หัวข้อข่าว, name: title, widget: string }
+      - { label: วันที่เผยแพร่, name: date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "DD/MM/YYYY", time_format: "HH:mm" }
+      - label: หมวดหมู่
+        name: category
+        widget: select
+        options: ["ภารกิจกู้ภัย", "กิจกรรม", "อบรม", "ประชาสัมพันธ์", "ประกาศ", "อื่น ๆ"]
+        default: "ประชาสัมพันธ์"
+      - { label: สถานที่, name: location, widget: string, required: false }
+      - { label: คำโปรย, name: summary, widget: text }
+      - { label: รายละเอียดข่าว, name: body, widget: text }
+      - { label: ภาพปก, name: cover, widget: image, required: false }
+      - label: ภาพเพิ่มเติม
+        name: images
+        widget: list
+        required: false
+        field: { label: รูปภาพ, name: image, widget: image }
+      - { label: ชื่อแหล่งข้อมูล, name: source_name, widget: string, required: false }
+      - { label: URL แหล่งข้อมูล, name: source_url, widget: string, required: false }
+      - { label: แสดงเป็นข่าวเด่น, name: featured, widget: boolean, default: false }
+
+  - name: documents
+    label: เอกสารดาวน์โหลด
+    label_singular: เอกสาร
+    folder: PCRC_Netlify_CMS_Source/content/documents
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: ชื่อเอกสาร, name: title, widget: string }
+      - { label: วันที่, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - label: หมวดหมู่
+        name: category
+        widget: select
+        options: ["แบบฟอร์ม", "ประกาศ", "รายงาน", "ระเบียบ/ข้อบังคับ", "คู่มือ", "เอกสารทั่วไป"]
+        default: "เอกสารทั่วไป"
+      - { label: คำอธิบาย, name: description, widget: text, required: false }
+      - { label: ไฟล์เอกสาร, name: file, widget: file }
+
+  - name: announcements
+    label: ประกาศหน้าเว็บไซต์
+    label_singular: ประกาศ
+    folder: PCRC_Netlify_CMS_Source/content/announcements
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: หัวข้อ, name: title, widget: string }
+      - { label: ข้อความ, name: body, widget: text }
+      - label: ระดับ
+        name: level
+        widget: select
+        options:
+          - { label: ทั่วไป, value: normal }
+          - { label: สำคัญ, value: important }
+          - { label: เร่งด่วน, value: urgent }
+        default: normal
+      - { label: วันเริ่มแสดง, name: start, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { label: วันสิ้นสุด, name: end, widget: datetime, format: "YYYY-MM-DD", time_format: false, required: false }
+
+  - name: gallery
+    label: แกลเลอรีภาพ
+    label_singular: อัลบั้ม
+    folder: PCRC_Netlify_CMS_Source/content/gallery
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: ชื่ออัลบั้ม, name: title, widget: string }
+      - { label: วันที่, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { label: รายละเอียด, name: description, widget: text, required: false }
+      - { label: ภาพปก, name: cover, widget: image, required: false }
+      - label: รูปภาพในอัลบั้ม
+        name: images
+        widget: list
+        field: { label: รูปภาพ, name: image, widget: image }
+
+  - name: sources
+    label: แหล่งข้อมูล
+    label_singular: แหล่งข้อมูล
+    folder: PCRC_Netlify_CMS_Source/content/sources
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: ชื่อแหล่งข้อมูล, name: title, widget: string }
+      - { label: URL, name: url, widget: string }
+      - label: ประเภท
+        name: type
+        widget: select
+        options: ["Facebook", "เว็บไซต์ราชการ", "สำนักข่าว", "องค์กรพันธมิตร", "อื่น ๆ"]
+      - { label: หมายเหตุ, name: note, widget: text, required: false }
+      - { label: ใช้งาน, name: active, widget: boolean, default: true }
+
+
+  - name: pages
+    label: เนื้อหาหน้าเว็บไซต์
+    files:
+      - label: หน้าแรก
+        name: home
+        file: PCRC_Netlify_CMS_Source/content/pages/home.json
+        format: json
+        fields:
+          - { label: ข้อความเล็กเหนือหัวเรื่อง, name: hero_eyebrow, widget: string }
+          - { label: หัวเรื่องหลัก, name: hero_title, widget: string }
+          - { label: ข้อความเน้นใต้หัวเรื่อง, name: hero_highlight, widget: string }
+          - { label: ชื่อสมาคมเต็ม, name: hero_fullname, widget: string }
+          - { label: คำอธิบายหน้าแรก, name: hero_intro, widget: text }
+          - { label: ปุ่มหลัก - ข้อความ, name: hero_primary_text, widget: string }
+          - { label: ปุ่มหลัก - ลิงก์, name: hero_primary_link, widget: string }
+          - { label: ปุ่มรอง - ข้อความ, name: hero_secondary_text, widget: string }
+          - { label: ปุ่มรอง - ลิงก์, name: hero_secondary_link, widget: string }
+          - { label: ข้อความพื้นที่, name: location_text, widget: string }
+          - { label: ข้อความประเภทงาน, name: service_text, widget: string }
+          - label: ตัวเลข/ข้อมูลสำคัญ
+            name: stats
+            widget: list
+            fields:
+              - { label: ค่าหลัก, name: value, widget: string }
+              - { label: คำอธิบาย, name: label, widget: string }
+          - { label: หัวข้อเล็กส่วนเมนู, name: explore_kicker, widget: string }
+          - { label: หัวข้อส่วนเมนู, name: explore_title, widget: string }
+          - { label: คำอธิบายส่วนเมนู, name: explore_intro, widget: text }
+          - { label: หัวข้อเล็กส่วนภารกิจ, name: mission_kicker, widget: string }
+          - { label: หัวข้อส่วนภารกิจ, name: mission_title, widget: string }
+          - { label: รายละเอียดส่วนภารกิจ, name: mission_body, widget: text }
+          - { label: หัวข้อเล็กข่าวล่าสุด, name: latest_kicker, widget: string }
+          - { label: หัวข้อข่าวล่าสุด, name: latest_title, widget: string }
+          - { label: คำอธิบายข่าวล่าสุด, name: latest_intro, widget: text }
+          - { label: หัวข้อเล็ก Facebook, name: cta_kicker, widget: string }
+          - { label: หัวข้อ Facebook, name: cta_title, widget: string }
+          - { label: รายละเอียด Facebook, name: cta_body, widget: text }
+          - { label: ข้อความปุ่ม Facebook, name: cta_button, widget: string }
+
+      - label: เกี่ยวกับเรา
+        name: about
+        file: PCRC_Netlify_CMS_Source/content/pages/about.json
+        format: json
+        fields:
+          - { label: ข้อความเล็กบนหน้า, name: hero_kicker, widget: string }
+          - { label: ชื่อหน้า, name: hero_title, widget: string }
+          - { label: คำอธิบายหน้า, name: hero_intro, widget: text }
+          - { label: หัวข้อเล็กแนะนำสมาคม, name: section_kicker, widget: string }
+          - { label: หัวข้อแนะนำสมาคม, name: section_title, widget: string }
+          - { label: รายละเอียดสมาคม, name: section_body, widget: text }
+          - { label: หมายเหตุข้อมูล, name: notice, widget: text }
+          - { label: พื้นที่หลัก, name: area, widget: string }
+          - { label: ลักษณะงาน, name: work_type, widget: string }
+          - { label: หัวข้อเล็กค่านิยม, name: values_kicker, widget: string }
+          - { label: หัวข้อค่านิยม, name: values_title, widget: string }
+          - { label: คำอธิบายค่านิยม, name: values_intro, widget: text }
+          - label: หลักการทำงาน
+            name: values
+            widget: list
+            fields:
+              - { label: หัวข้อ, name: title, widget: string }
+              - { label: รายละเอียด, name: body, widget: text }
+          - { label: หัวข้อเล็กประวัติ, name: timeline_kicker, widget: string }
+          - { label: หัวข้อประวัติ/ผลงาน, name: timeline_title, widget: string }
+          - label: รายการประวัติ/ผลงาน
+            name: timeline
+            widget: list
+            fields:
+              - { label: ปี, name: year, widget: string }
+              - { label: หัวข้อ, name: title, widget: string }
+              - { label: รายละเอียด, name: body, widget: text }
+
+      - label: ภารกิจ
+        name: missions
+        file: PCRC_Netlify_CMS_Source/content/pages/missions.json
+        format: json
+        fields:
+          - { label: ข้อความเล็กบนหน้า, name: hero_kicker, widget: string }
+          - { label: ชื่อหน้า, name: hero_title, widget: string }
+          - { label: คำอธิบายหน้า, name: hero_intro, widget: text }
+          - label: รายการภารกิจ
+            name: missions
+            widget: list
+            fields:
+              - { label: ไอคอน/อีโมจิ, name: icon, widget: string }
+              - { label: ชื่อภารกิจ, name: title, widget: string }
+              - { label: รายละเอียด, name: body, widget: text }
+          - { label: หัวข้อเล็กท้ายหน้า, name: cta_kicker, widget: string }
+          - { label: หัวข้อท้ายหน้า, name: cta_title, widget: string }
+          - { label: รายละเอียดท้ายหน้า, name: cta_body, widget: text }
+          - { label: ข้อความปุ่ม, name: cta_button, widget: string }
+
+      - label: ข่าวสาร (ข้อความประกอบหน้า)
+        name: newspage
+        file: PCRC_Netlify_CMS_Source/content/pages/news.json
+        format: json
+        fields:
+          - { label: ข้อความเล็กบนหน้า, name: hero_kicker, widget: string }
+          - { label: ชื่อหน้า, name: hero_title, widget: string }
+          - { label: คำอธิบายหน้า, name: hero_intro, widget: text }
+          - { label: หัวข้อเล็กส่วนข่าว, name: news_kicker, widget: string }
+          - { label: หัวข้อส่วนข่าว, name: news_title, widget: string }
+          - { label: คำอธิบายส่วนข่าว, name: news_intro, widget: text }
+          - { label: หัวข้อเล็กแกลเลอรี, name: gallery_kicker, widget: string }
+          - { label: หัวข้อแกลเลอรี, name: gallery_title, widget: string }
+          - { label: คำอธิบายแกลเลอรี, name: gallery_intro, widget: text }
+          - { label: หัวข้อเล็กท้ายหน้า, name: cta_kicker, widget: string }
+          - { label: หัวข้อท้ายหน้า, name: cta_title, widget: string }
+          - { label: รายละเอียดท้ายหน้า, name: cta_body, widget: text }
+          - { label: ข้อความปุ่ม, name: cta_button, widget: string }
+
+      - label: ศูนย์สื่อสาร
+        name: communications
+        file: PCRC_Netlify_CMS_Source/content/pages/communications.json
+        format: json
+        fields:
+          - { label: ข้อความเล็กบนหน้า, name: hero_kicker, widget: string }
+          - { label: ชื่อหน้า, name: hero_title, widget: string }
+          - { label: คำอธิบายหน้า, name: hero_intro, widget: text }
+          - { label: หัวข้อเล็กระบบสื่อสาร, name: section_kicker, widget: string }
+          - { label: หัวข้อระบบสื่อสาร, name: section_title, widget: string }
+          - { label: รายละเอียดระบบสื่อสาร, name: section_body, widget: text }
+          - label: ระบบ/ช่องทางสื่อสาร
+            name: systems
+            widget: list
+            fields:
+              - { label: ไอคอน/อีโมจิ, name: icon, widget: string }
+              - { label: ชื่อระบบ, name: title, widget: string }
+              - { label: รายละเอียด, name: body, widget: text }
+          - { label: หมายเหตุสถานะ, name: status_note, widget: text }
+          - { label: หัวข้อท้ายหน้า, name: cta_title, widget: string }
+          - { label: รายละเอียดท้ายหน้า, name: cta_body, widget: text }
+          - { label: ข้อความปุ่ม, name: cta_button, widget: string }
+
+      - label: อาสาสมัคร
+        name: volunteer
+        file: PCRC_Netlify_CMS_Source/content/pages/volunteer.json
+        format: json
+        fields:
+          - { label: ข้อความเล็กบนหน้า, name: hero_kicker, widget: string }
+          - { label: ชื่อหน้า, name: hero_title, widget: string }
+          - { label: คำอธิบายหน้า, name: hero_intro, widget: text }
+          - { label: หัวข้อเล็กเนื้อหา, name: section_kicker, widget: string }
+          - { label: หัวข้อเนื้อหา, name: section_title, widget: string }
+          - { label: รายละเอียด, name: section_body, widget: text }
+          - label: หน้าที่อาสา
+            name: roles
+            widget: list
+            field: { label: หน้าที่, name: role, widget: string }
+          - { label: หัวข้อติดต่อสมัคร, name: contact_title, widget: string }
+          - { label: รายละเอียดการสมัคร, name: contact_body, widget: text }
+          - { label: ข้อความปุ่มสมัคร, name: contact_button, widget: string }
+          - { label: หัวข้อเล็กการเตรียมตัว, name: qualities_kicker, widget: string }
+          - { label: หัวข้อการเตรียมตัว, name: qualities_title, widget: string }
+          - label: คุณลักษณะ/การเตรียมตัว
+            name: qualities
+            widget: list
+            fields:
+              - { label: หัวข้อ, name: title, widget: string }
+              - { label: รายละเอียด, name: body, widget: text }
+
+      - label: ร่วมบริจาค
+        name: donate
+        file: PCRC_Netlify_CMS_Source/content/pages/donate.json
+        format: json
+        fields:
+          - { label: ข้อความเล็กบนหน้า, name: hero_kicker, widget: string }
+          - { label: ชื่อหน้า, name: hero_title, widget: string }
+          - { label: คำอธิบายหน้า, name: hero_intro, widget: text }
+          - { label: หัวข้อเล็กคำแนะนำ, name: section_kicker, widget: string }
+          - { label: หัวข้อคำแนะนำ, name: section_title, widget: string }
+          - { label: รายละเอียดคำแนะนำ, name: section_body, widget: text }
+          - label: ข้อควรตรวจสอบ
+            name: safety
+            widget: list
+            fields:
+              - { label: หัวข้อ, name: title, widget: string }
+              - { label: รายละเอียด, name: body, widget: text }
+          - { label: หัวข้อเล็กการสนับสนุน, name: support_kicker, widget: string }
+          - { label: หัวข้อการสนับสนุน, name: support_title, widget: string }
+          - { label: คำอธิบายการสนับสนุน, name: support_intro, widget: text }
+          - label: รายการที่เกี่ยวกับงานกู้ภัย
+            name: support_items
+            widget: list
+            fields:
+              - { label: ไอคอน/อีโมจิ, name: icon, widget: string }
+              - { label: หัวข้อ, name: title, widget: string }
+              - { label: รายละเอียด, name: body, widget: text }
+
+      - label: ดาวน์โหลด
+        name: downloads
+        file: PCRC_Netlify_CMS_Source/content/pages/downloads.json
+        format: json
+        fields:
+          - { label: ข้อความเล็กบนหน้า, name: hero_kicker, widget: string }
+          - { label: ชื่อหน้า, name: hero_title, widget: string }
+          - { label: คำอธิบายหน้า, name: hero_intro, widget: text }
+          - { label: หัวข้อสถานะเอกสาร, name: status_title, widget: string }
+          - { label: รายละเอียดสถานะเอกสาร, name: status_body, widget: text }
+          - { label: หัวข้อเล็กท้ายหน้า, name: cta_kicker, widget: string }
+          - { label: หัวข้อท้ายหน้า, name: cta_title, widget: string }
+          - { label: รายละเอียดท้ายหน้า, name: cta_body, widget: text }
+          - { label: ข้อความปุ่ม, name: cta_button, widget: string }
+
+      - label: ติดต่อเรา
+        name: contact
+        file: PCRC_Netlify_CMS_Source/content/pages/contact.json
+        format: json
+        fields:
+          - { label: ข้อความเล็กบนหน้า, name: hero_kicker, widget: string }
+          - { label: ชื่อหน้า, name: hero_title, widget: string }
+          - { label: คำอธิบายหน้า, name: hero_intro, widget: text }
+          - { label: ข้อความในแผนที่, name: map_label, widget: string }
+          - { label: หมายเหตุแผนที่, name: map_note, widget: text }
+          - { label: หัวข้อหมายเหตุท้ายหน้า, name: notice_title, widget: string }
+          - { label: รายละเอียดหมายเหตุท้ายหน้า, name: notice_body, widget: text }
+
+  - name: settings
+    label: ตั้งค่าเว็บไซต์
+    files:
+      - label: ข้อมูลสมาคม / ติดต่อ / บริจาค
+        name: site
+        file: PCRC_Netlify_CMS_Source/content/settings/site.json
+        format: json
+        fields:
+          - { label: ชื่อสมาคม, name: association_name, widget: string }
+          - { label: ชื่อย่อ, name: short_name, widget: string }
+          - { label: Facebook, name: facebook, widget: string }
+          - { label: โทรศัพท์สมาคม, name: phone, widget: string, required: false }
+          - { label: Email, name: email, widget: string, required: false }
+          - { label: LINE, name: line, widget: string, required: false }
+          - { label: ที่อยู่, name: address, widget: text }
+          - { label: ลิงก์แผนที่, name: map_url, widget: string, required: false }
+          - { label: เบอร์ฉุกเฉิน, name: emergency, widget: string, default: "1669" }
+          - { label: เปิดแสดงข้อมูลบริจาค, name: donate_enabled, widget: boolean, default: false }
+          - { label: ธนาคาร, name: bank_name, widget: string, required: false }
+          - { label: ชื่อบัญชี, name: account_name, widget: string, required: false }
+          - { label: เลขบัญชี, name: account_number, widget: string, required: false }
+          - { label: หมายเหตุการบริจาค, name: donation_note, widget: text, required: false }
+          - { label: QR Code บริจาค, name: qr_image, widget: image, required: false }
