@@ -1,0 +1,31 @@
+P.C.R.C. — วิธีนำเว็บไซต์ขึ้น Netlify พร้อมระบบหลังบ้าน
+=====================================================
+
+ถ้าต้องการใช้แค่หน้าเว็บทดลอง:
+- ใช้ไฟล์ PCRC_Netlify_Preview.zip
+- ลากไปวางที่ Netlify Drop ได้
+- แต่ระบบ /admin/ จะยังบันทึกข่าวไม่ได้
+
+ถ้าต้องการใช้งานจริง พร้อมเพิ่มข่าว/เอกสารจากหลังบ้าน:
+1) ใช้ชุด PCRC_Netlify_CMS_Source.zip
+2) สร้าง GitHub Repository ใหม่
+3) แตก ZIP แล้วอัปโหลด “ไฟล์ข้างในทั้งหมด” เข้า Repository
+   ให้ netlify.toml, package.json, admin/, content/, site/ อยู่ที่หน้าแรกของ Repo
+4) Netlify > Add new project > Import an existing project > GitHub
+5) เลือก Repo แล้ว Deploy
+6) เปิด Netlify Identity
+7) ตั้ง Registration = Invite only
+8) เปิด Git Gateway
+9) เชิญอีเมลผู้ดูแล
+10) เข้า https://ชื่อเว็บ.netlify.app/admin/
+
+เมื่อลงข่าวแล้วกด Publish:
+CMS -> Git Gateway -> GitHub -> Netlify Build -> ข่าวขึ้นเว็บไซต์อัตโนมัติ
+
+หน้าช่วยดึงข้อมูลจาก URL:
+https://ชื่อเว็บ.netlify.app/admin/import.html
+ระบบจะดึงหัวข้อ/คำอธิบาย/ภาพที่เว็บไซต์ต้นทางเปิดให้เข้าถึง เพื่อใช้เป็นต้นร่าง
+
+หมายเหตุ:
+Facebook และบางเว็บไซต์อาจไม่อนุญาตให้ระบบอ่านข้อมูลอัตโนมัติ
+จึงต้องตรวจสอบต้นทางและเรียบเรียงก่อนเผยแพร่ทุกครั้ง

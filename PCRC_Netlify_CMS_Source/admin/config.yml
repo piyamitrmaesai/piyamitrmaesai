@@ -1,0 +1,146 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: th
+publish_mode: editorial_workflow
+media_folder: assets/uploads
+public_folder: /assets/uploads
+logo_url: /assets/piyamitr-logo.png
+
+collections:
+  - name: news
+    label: ข่าวสาร
+    label_singular: ข่าว
+    folder: content/news
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{date}} — {{title}}"
+    fields:
+      - { label: หัวข้อข่าว, name: title, widget: string }
+      - { label: วันที่เผยแพร่, name: date, widget: datetime, format: "YYYY-MM-DDTHH:mm:ssZ", date_format: "DD/MM/YYYY", time_format: "HH:mm" }
+      - label: หมวดหมู่
+        name: category
+        widget: select
+        options: ["ภารกิจกู้ภัย", "กิจกรรม", "อบรม", "ประชาสัมพันธ์", "ประกาศ", "อื่น ๆ"]
+        default: "ประชาสัมพันธ์"
+      - { label: สถานที่, name: location, widget: string, required: false }
+      - { label: คำโปรย, name: summary, widget: text }
+      - { label: รายละเอียดข่าว, name: body, widget: text }
+      - { label: ภาพปก, name: cover, widget: image, required: false }
+      - label: ภาพเพิ่มเติม
+        name: images
+        widget: list
+        required: false
+        field: { label: รูปภาพ, name: image, widget: image }
+      - { label: ชื่อแหล่งข้อมูล, name: source_name, widget: string, required: false }
+      - { label: URL แหล่งข้อมูล, name: source_url, widget: string, required: false }
+      - { label: แสดงเป็นข่าวเด่น, name: featured, widget: boolean, default: false }
+
+  - name: documents
+    label: เอกสารดาวน์โหลด
+    label_singular: เอกสาร
+    folder: content/documents
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: ชื่อเอกสาร, name: title, widget: string }
+      - { label: วันที่, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - label: หมวดหมู่
+        name: category
+        widget: select
+        options: ["แบบฟอร์ม", "ประกาศ", "รายงาน", "ระเบียบ/ข้อบังคับ", "คู่มือ", "เอกสารทั่วไป"]
+        default: "เอกสารทั่วไป"
+      - { label: คำอธิบาย, name: description, widget: text, required: false }
+      - { label: ไฟล์เอกสาร, name: file, widget: file }
+
+  - name: announcements
+    label: ประกาศหน้าเว็บไซต์
+    label_singular: ประกาศ
+    folder: content/announcements
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: หัวข้อ, name: title, widget: string }
+      - { label: ข้อความ, name: body, widget: text }
+      - label: ระดับ
+        name: level
+        widget: select
+        options:
+          - { label: ทั่วไป, value: normal }
+          - { label: สำคัญ, value: important }
+          - { label: เร่งด่วน, value: urgent }
+        default: normal
+      - { label: วันเริ่มแสดง, name: start, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { label: วันสิ้นสุด, name: end, widget: datetime, format: "YYYY-MM-DD", time_format: false, required: false }
+
+  - name: gallery
+    label: แกลเลอรีภาพ
+    label_singular: อัลบั้ม
+    folder: content/gallery
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: ชื่ออัลบั้ม, name: title, widget: string }
+      - { label: วันที่, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { label: รายละเอียด, name: description, widget: text, required: false }
+      - { label: ภาพปก, name: cover, widget: image, required: false }
+      - label: รูปภาพในอัลบั้ม
+        name: images
+        widget: list
+        field: { label: รูปภาพ, name: image, widget: image }
+
+  - name: sources
+    label: แหล่งข้อมูล
+    label_singular: แหล่งข้อมูล
+    folder: content/sources
+    create: true
+    delete: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: ชื่อแหล่งข้อมูล, name: title, widget: string }
+      - { label: URL, name: url, widget: string }
+      - label: ประเภท
+        name: type
+        widget: select
+        options: ["Facebook", "เว็บไซต์ราชการ", "สำนักข่าว", "องค์กรพันธมิตร", "อื่น ๆ"]
+      - { label: หมายเหตุ, name: note, widget: text, required: false }
+      - { label: ใช้งาน, name: active, widget: boolean, default: true }
+
+  - name: settings
+    label: ตั้งค่าเว็บไซต์
+    files:
+      - label: ข้อมูลสมาคม / ติดต่อ / บริจาค
+        name: site
+        file: content/settings/site.json
+        format: json
+        fields:
+          - { label: ชื่อสมาคม, name: association_name, widget: string }
+          - { label: ชื่อย่อ, name: short_name, widget: string }
+          - { label: Facebook, name: facebook, widget: string }
+          - { label: โทรศัพท์สมาคม, name: phone, widget: string, required: false }
+          - { label: Email, name: email, widget: string, required: false }
+          - { label: LINE, name: line, widget: string, required: false }
+          - { label: ที่อยู่, name: address, widget: text }
+          - { label: ลิงก์แผนที่, name: map_url, widget: string, required: false }
+          - { label: เบอร์ฉุกเฉิน, name: emergency, widget: string, default: "1669" }
+          - { label: เปิดแสดงข้อมูลบริจาค, name: donate_enabled, widget: boolean, default: false }
+          - { label: ธนาคาร, name: bank_name, widget: string, required: false }
+          - { label: ชื่อบัญชี, name: account_name, widget: string, required: false }
+          - { label: เลขบัญชี, name: account_number, widget: string, required: false }
+          - { label: หมายเหตุการบริจาค, name: donation_note, widget: text, required: false }
+          - { label: QR Code บริจาค, name: qr_image, widget: image, required: false }
