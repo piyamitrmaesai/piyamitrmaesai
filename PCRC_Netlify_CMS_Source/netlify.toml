@@ -19,6 +19,28 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 [[headers]]
-  for = "/admin/*"
+  for = "/admin/index.html"
   [headers.values]
     Cache-Control = "no-store"
+
+[[headers]]
+  for = "/admin/config.yml"
+  [headers.values]
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/admin/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
+    Service-Worker-Allowed = "/admin/"
+
+[[headers]]
+  for = "/admin/manifest.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/admin/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, immutable"

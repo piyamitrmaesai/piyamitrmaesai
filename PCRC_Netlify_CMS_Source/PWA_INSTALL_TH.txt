@@ -1,0 +1,37 @@
+P.C.R.C. ADMIN — PWA สำหรับติดตั้งบนมือถือ
+==========================================
+
+ไฟล์ชุดนี้เพิ่ม PWA ให้หน้า https://piyamitrmaesai.netlify.app/admin/
+โดยไม่เปลี่ยนระบบ Decap CMS / Netlify Identity / ข่าว / เอกสารเดิม
+
+หลังอัปโหลดขึ้น GitHub และ Netlify Deploy เป็น Published:
+
+1) เปิด https://piyamitrmaesai.netlify.app/admin/install.html
+2) Android: เปิดด้วย Chrome แล้วกด “ติดตั้ง P.C.R.C. Admin”
+   ถ้าปุ่มไม่ขึ้น: เมนู ⋮ > ติดตั้งแอป หรือ เพิ่มไปยังหน้าจอหลัก
+3) iPhone/iPad: เปิดด้วย Safari > แชร์ > Add to Home Screen > Add
+4) เมื่อเปิดจากไอคอน แอปจะเปิดตรง /admin/ แบบ Standalone
+
+ไฟล์ PWA ที่เพิ่ม:
+- admin/manifest.webmanifest
+- admin/sw.js
+- admin/pwa.js
+- admin/install.html
+- admin/offline.html
+- admin/icons/icon-192.png
+- admin/icons/icon-512.png
+- admin/icons/icon-maskable-512.png
+- admin/icons/apple-touch-icon.png
+- แก้ admin/index.html
+- แก้ netlify.toml
+
+ความปลอดภัย/Cache:
+- Service Worker มี Scope เฉพาะ /admin/
+- ไม่ Cache Netlify Identity, Login, Decap CMS API, config.yml หรือข้อมูล CMS
+- ระบบหลังบ้านต้องใช้อินเทอร์เน็ตเพื่อเข้าสู่ระบบ/บันทึก/เผยแพร่
+
+Netlify settings เดิม:
+Base directory: PCRC_Netlify_CMS_Source
+Build command: npm run build
+Publish directory: dist
+Functions directory: netlify/functions
