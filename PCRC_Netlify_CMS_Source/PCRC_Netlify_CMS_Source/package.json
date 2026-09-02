@@ -1,9 +1,0 @@
-{
-  "name": "pcrc-netlify-cms",
-  "version": "1.0.0",
-  "private": true,
-  "description": "P.C.R.C. website for Netlify + Decap CMS",
-  "scripts": {
-    "build": "node scripts/build.js"
-  }
-}
