@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T18:37:04.445Z",
+  "generated_at": "2026-09-02T10:33:47.894Z",
   "news": [],
   "documents": [],
   "announcements": [],
@@ -83,6 +83,9 @@
           "body": "ร่วมเป็นภาคีในกิจกรรมส่งเสริมทักษะช่วยชีวิตและการรับมือภัยพิบัติสำหรับเด็กและเยาวชนในแม่สาย"
         }
       ],
+      "hero_background": "",
+      "section_image": "",
+      "section_image_alt": "",
       "slug": "about"
     },
     "communications": {
@@ -118,6 +121,9 @@
       "cta_title": "ต้องการประสานงานกับสมาคม?",
       "cta_body": "ใช้ช่องทางติดต่อที่สมาคมเผยแพร่เพื่อสอบถามข้อมูลการสื่อสารหรือการประสานภารกิจ",
       "cta_button": "ติดต่อสมาคม",
+      "hero_background": "",
+      "section_image": "",
+      "section_image_alt": "",
       "slug": "communications"
     },
     "contact": {
@@ -128,6 +134,9 @@
       "map_note": "ภาพประกอบระดับพื้นที่ ไม่ใช่พิกัดที่ทำการสมาคม",
       "notice_title": "ข้อมูลติดต่อสามารถแก้ได้จากระบบหลังบ้าน",
       "notice_body": "โทรศัพท์ ที่อยู่ แผนที่ LINE อีเมล Facebook และช่องทางบริจาค สามารถแก้ไขได้จากเมนู “ตั้งค่าเว็บไซต์” ในระบบผู้ดูแล",
+      "hero_background": "",
+      "section_image": "",
+      "section_image_alt": "",
       "slug": "contact"
     },
     "donate": {
@@ -171,6 +180,9 @@
           "body": "อุปกรณ์สื่อสารและระบบสนับสนุนการประสานงานในภารกิจ"
         }
       ],
+      "hero_background": "",
+      "section_image": "",
+      "section_image_alt": "",
       "slug": "donate"
     },
     "downloads": {
@@ -183,24 +195,27 @@
       "cta_title": "จัดการเอกสารได้จากระบบหลังบ้าน",
       "cta_body": "ผู้ดูแลสามารถอัปโหลด PDF, Word, Excel, PowerPoint และไฟล์ที่เกี่ยวข้องได้โดยไม่ต้องแก้โค้ดหน้าเว็บไซต์",
       "cta_button": "ติดต่อเพื่ออัปเดตข้อมูล",
+      "hero_background": "",
+      "section_image": "",
+      "section_image_alt": "",
       "slug": "downloads"
     },
     "home": {
-      "hero_eyebrow": "CO-OPERATIVE EMERGENCY • RESCUE • CHARITY",
-      "hero_title": "ปิยะมิตรแม่สายร่วมใจ",
-      "hero_highlight": "เพื่อประชาชนในทุกสถานการณ์",
+      "hero_eyebrow": "PIYAMITR MAESAI • EMERGENCY • RESCUE • CHARITY",
+      "hero_title": "พร้อมช่วยเหลือประชาชน",
+      "hero_highlight": "ด้วยพลังของจิตอาสาและเครือข่าย",
       "hero_fullname": "สมาคมปิยะมิตรแม่สายร่วมใจ บรรเทาสาธารณภัยและการกุศล",
-      "hero_intro": "องค์กรสาธารณกุศลในอำเภอแม่สาย จังหวัดเชียงราย ที่มีบทบาทด้านการช่วยเหลือผู้ประสบอุบัติเหตุ ภัยพิบัติ การแพทย์ฉุกเฉิน และงานสาธารณประโยชน์ร่วมกับภาคีในพื้นที่",
+      "hero_intro": "สมาคมปิยะมิตรแม่สายร่วมใจ บรรเทาสาธารณภัยและการกุศล ปฏิบัติงานช่วยเหลือประชาชนในพื้นที่อำเภอแม่สาย จังหวัดเชียงราย ครอบคลุมงานกู้ชีพ กู้ภัย บรรเทาสาธารณภัย และกิจกรรมสาธารณกุศลร่วมกับภาคีในพื้นที่",
       "hero_primary_text": "ดูภารกิจของเรา",
       "hero_primary_link": "missions.html",
-      "hero_secondary_text": "ติดต่อสมาคม",
+      "hero_secondary_text": "ติดต่อ / ประสานงาน",
       "hero_secondary_link": "contact.html",
       "location_text": "อำเภอแม่สาย จังหวัดเชียงราย",
       "service_text": "การแพทย์ฉุกเฉิน • กู้ภัย • สาธารณกุศล",
       "stats": [
         {
           "value": "1669",
-          "label": "สายด่วนการแพทย์ฉุกเฉิน"
+          "label": "เจ็บป่วยฉุกเฉิน โทรสายด่วนการแพทย์ฉุกเฉิน"
         },
         {
           "value": "แม่สาย",
@@ -208,26 +223,31 @@
         },
         {
           "value": "P.C.R.C.",
-          "label": "กู้ชีพ • กู้ภัย • สาธารณกุศล"
+          "label": "กู้ชีพ • กู้ภัย • บรรเทาสาธารณภัย • การกุศล"
         },
         {
-          "value": "24/7",
-          "label": "เหตุฉุกเฉินเกิดขึ้นได้ทุกเวลา"
+          "value": "Facebook",
+          "label": "ติดตามประกาศและความเคลื่อนไหวจากช่องทางสมาคม"
         }
       ],
       "explore_kicker": "EXPLORE P.C.R.C.",
       "explore_title": "รู้จักสมาคมและภารกิจของเรา",
       "explore_intro": "เข้าถึงข้อมูลของสมาคมได้สะดวกทั้งบนคอมพิวเตอร์และโทรศัพท์มือถือ",
-      "mission_kicker": "MISSION HIGHLIGHT",
-      "mission_title": "ช่วยเหลือชีวิต บรรเทาภัย และทำงานร่วมกับชุมชน",
-      "mission_body": "ลักษณะภารกิจของสมาคมครอบคลุมการช่วยเหลือเหตุฉุกเฉิน อุบัติเหตุ ภัยพิบัติ งานสาธารณกุศล และการทำงานร่วมกับหน่วยงานหรือเครือข่ายในพื้นที่",
-      "latest_kicker": "LATEST NEWS",
-      "latest_title": "ข่าวสารล่าสุด",
-      "latest_intro": "ข่าวที่เผยแพร่จากระบบผู้ดูแลจะแสดงในหน้าแรกโดยอัตโนมัติ",
-      "cta_kicker": "CONNECT WITH P.C.R.C.",
-      "cta_title": "ติดตามข่าวล่าสุดจากช่องทางของสมาคม",
+      "mission_kicker": "OUR MISSIONS",
+      "mission_title": "ภารกิจเพื่อประชาชนและชุมชน",
+      "mission_body": "สนับสนุนการช่วยเหลือผู้ประสบเหตุ การแพทย์ฉุกเฉิน อุบัติเหตุ ภัยพิบัติ งานสาธารณกุศล และการประสานงานกับเครือข่ายในพื้นที่",
+      "latest_kicker": "NEWS & OPERATIONS",
+      "latest_title": "ข่าวสารและภารกิจล่าสุด",
+      "latest_intro": "ข่าวที่ผู้ดูแลเผยแพร่จากระบบหลังบ้านจะแสดงในส่วนนี้โดยอัตโนมัติ",
+      "cta_kicker": "JOIN P.C.R.C.",
+      "cta_title": "ร่วมเป็นพลังในการช่วยเหลือสังคม",
       "cta_body": "สำหรับประกาศ ภารกิจล่าสุด การรับสมัครอาสา และช่องทางสนับสนุน โปรดตรวจสอบจาก Facebook ของสมาคมโดยตรง",
       "cta_button": "เปิด Facebook ↗",
+      "hero_background": "",
+      "hero_feature_image": "",
+      "hero_feature_alt": "",
+      "mission_image": "",
+      "mission_image_alt": "",
       "slug": "home"
     },
     "missions": {
@@ -270,6 +290,9 @@
       "cta_title": "สนใจร่วมเป็นอาสาสมัคร?",
       "cta_body": "อ่านแนวทางการเข้าร่วมและติดต่อสมาคมเพื่อสอบถามการรับสมัครล่าสุด",
       "cta_button": "ดูหน้าอาสาสมัคร",
+      "hero_background": "",
+      "section_image": "",
+      "section_image_alt": "",
       "slug": "missions"
     },
     "news": {
@@ -286,6 +309,9 @@
       "cta_title": "ติดตามความเคลื่อนไหวบน Facebook",
       "cta_body": "สำหรับเหตุการณ์รายวันและประกาศเร่งด่วน สามารถตรวจสอบเพิ่มเติมจาก Facebook ของสมาคมได้โดยตรง",
       "cta_button": "เปิด Facebook ↗",
+      "hero_background": "",
+      "section_image": "",
+      "section_image_alt": "",
       "slug": "news"
     },
     "volunteer": {
@@ -322,6 +348,9 @@
           "body": "สื่อสารชัดเจน เคารพบทบาทของผู้อื่น และคำนึงถึงความปลอดภัยของทีม"
         }
       ],
+      "hero_background": "",
+      "section_image": "",
+      "section_image_alt": "",
       "slug": "volunteer"
     }
   }
