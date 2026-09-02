@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T10:33:47.894Z",
+  "generated_at": "2026-09-02T10:56:04.691Z",
   "news": [],
   "documents": [],
   "announcements": [],
@@ -88,44 +88,6 @@
       "section_image_alt": "",
       "slug": "about"
     },
-    "communications": {
-      "hero_kicker": "COMMUNICATION CENTER",
-      "hero_title": "ศูนย์สื่อสารและประสานงาน",
-      "hero_intro": "พื้นที่นำเสนอแนวทาง ระบบ และข้อมูลการสื่อสารที่ใช้สนับสนุนการประสานงานภารกิจกู้ชีพกู้ภัย",
-      "section_kicker": "COMMUNICATION PROJECT",
-      "section_title": "แนวทางพัฒนาระบบสื่อสาร VHF / COS / POC",
-      "section_body": "แนวคิดเพื่อเชื่อมการรับแจ้งเหตุ ศูนย์ประสานงาน รถกู้ภัย และทีมภาคสนาม ให้สื่อสารกันรวดเร็วและเป็นระบบมากขึ้น",
-      "systems": [
-        {
-          "icon": "📻",
-          "title": "VHF Communication",
-          "body": "วิทยุสื่อสารสำหรับการปฏิบัติงานภาคสนาม"
-        },
-        {
-          "icon": "🛰️",
-          "title": "COS Coordination",
-          "body": "แนวทางจัดระเบียบการประสานงานและช่องสื่อสาร"
-        },
-        {
-          "icon": "📱",
-          "title": "POC Push-to-Talk",
-          "body": "เสริมการสื่อสารผ่านเครือข่ายข้อมูล"
-        },
-        {
-          "icon": "🚑",
-          "title": "Incident Coordination",
-          "body": "เชื่อมข้อมูลเหตุ กำลังพล และรถปฏิบัติการ"
-        }
-      ],
-      "status_note": "ส่วนนี้เป็นแนวทาง/โครงการพัฒนาระบบ ไม่ได้อ้างว่าเปิดใช้งานครบทุกองค์ประกอบแล้ว",
-      "cta_title": "ต้องการประสานงานกับสมาคม?",
-      "cta_body": "ใช้ช่องทางติดต่อที่สมาคมเผยแพร่เพื่อสอบถามข้อมูลการสื่อสารหรือการประสานภารกิจ",
-      "cta_button": "ติดต่อสมาคม",
-      "hero_background": "",
-      "section_image": "",
-      "section_image_alt": "",
-      "slug": "communications"
-    },
     "contact": {
       "hero_kicker": "CONTACT",
       "hero_title": "ติดต่อสมาคม",
@@ -201,21 +163,21 @@
       "slug": "downloads"
     },
     "home": {
-      "hero_eyebrow": "PIYAMITR MAESAI • EMERGENCY • RESCUE • CHARITY",
+      "hero_eyebrow": "P.C.R.C. • MAE SAI • CHIANG RAI",
       "hero_title": "พร้อมช่วยเหลือประชาชน",
       "hero_highlight": "ด้วยพลังของจิตอาสาและเครือข่าย",
       "hero_fullname": "สมาคมปิยะมิตรแม่สายร่วมใจ บรรเทาสาธารณภัยและการกุศล",
-      "hero_intro": "สมาคมปิยะมิตรแม่สายร่วมใจ บรรเทาสาธารณภัยและการกุศล ปฏิบัติงานช่วยเหลือประชาชนในพื้นที่อำเภอแม่สาย จังหวัดเชียงราย ครอบคลุมงานกู้ชีพ กู้ภัย บรรเทาสาธารณภัย และกิจกรรมสาธารณกุศลร่วมกับภาคีในพื้นที่",
-      "hero_primary_text": "ดูภารกิจของเรา",
-      "hero_primary_link": "missions.html",
-      "hero_secondary_text": "ติดต่อ / ประสานงาน",
-      "hero_secondary_link": "contact.html",
+      "hero_intro": "ปฏิบัติงานช่วยเหลือประชาชนในพื้นที่อำเภอแม่สาย จังหวัดเชียงราย ครอบคลุมงานกู้ชีพ กู้ภัย บรรเทาสาธารณภัย และงานสาธารณกุศล",
+      "hero_primary_text": "แจ้งเหตุ / ขอความช่วยเหลือ",
+      "hero_primary_link": "contact.html",
+      "hero_secondary_text": "ร่วมเป็นอาสาสมัคร",
+      "hero_secondary_link": "volunteer.html",
       "location_text": "อำเภอแม่สาย จังหวัดเชียงราย",
       "service_text": "การแพทย์ฉุกเฉิน • กู้ภัย • สาธารณกุศล",
       "stats": [
         {
           "value": "1669",
-          "label": "เจ็บป่วยฉุกเฉิน โทรสายด่วนการแพทย์ฉุกเฉิน"
+          "label": "สายด่วนการแพทย์ฉุกเฉิน"
         },
         {
           "value": "แม่สาย",
@@ -223,29 +185,29 @@
         },
         {
           "value": "P.C.R.C.",
-          "label": "กู้ชีพ • กู้ภัย • บรรเทาสาธารณภัย • การกุศล"
+          "label": "กู้ชีพ • กู้ภัย • สาธารณกุศล"
         },
         {
           "value": "Facebook",
-          "label": "ติดตามประกาศและความเคลื่อนไหวจากช่องทางสมาคม"
+          "label": "ข่าวสารและประกาศจากสมาคม"
         }
       ],
       "explore_kicker": "EXPLORE P.C.R.C.",
       "explore_title": "รู้จักสมาคมและภารกิจของเรา",
       "explore_intro": "เข้าถึงข้อมูลของสมาคมได้สะดวกทั้งบนคอมพิวเตอร์และโทรศัพท์มือถือ",
       "mission_kicker": "OUR MISSIONS",
-      "mission_title": "ภารกิจเพื่อประชาชนและชุมชน",
-      "mission_body": "สนับสนุนการช่วยเหลือผู้ประสบเหตุ การแพทย์ฉุกเฉิน อุบัติเหตุ ภัยพิบัติ งานสาธารณกุศล และการประสานงานกับเครือข่ายในพื้นที่",
-      "latest_kicker": "NEWS & OPERATIONS",
-      "latest_title": "ข่าวสารและภารกิจล่าสุด",
-      "latest_intro": "ข่าวที่ผู้ดูแลเผยแพร่จากระบบหลังบ้านจะแสดงในส่วนนี้โดยอัตโนมัติ",
-      "cta_kicker": "JOIN P.C.R.C.",
-      "cta_title": "ร่วมเป็นพลังในการช่วยเหลือสังคม",
-      "cta_body": "สำหรับประกาศ ภารกิจล่าสุด การรับสมัครอาสา และช่องทางสนับสนุน โปรดตรวจสอบจาก Facebook ของสมาคมโดยตรง",
+      "mission_title": "ภารกิจของเรา",
+      "mission_body": "",
+      "latest_kicker": "LATEST NEWS",
+      "latest_title": "ข่าวสารล่าสุด",
+      "latest_intro": "",
+      "cta_kicker": "JOIN & SUPPORT",
+      "cta_title": "ร่วมเป็นส่วนหนึ่งของเรา",
+      "cta_body": "ร่วมเป็นอาสาสมัคร หรือสนับสนุนภารกิจช่วยเหลือประชาชน",
       "cta_button": "เปิด Facebook ↗",
-      "hero_background": "",
+      "hero_background": "/assets/hero-rescue-demo.webp",
       "hero_feature_image": "",
-      "hero_feature_alt": "",
+      "hero_feature_alt": "ภาพประกอบงานกู้ภัย",
       "mission_image": "",
       "mission_image_alt": "",
       "slug": "home"
